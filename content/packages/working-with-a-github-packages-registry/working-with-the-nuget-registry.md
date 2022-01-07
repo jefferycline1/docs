@@ -89,9 +89,8 @@ If your instance has subdomain isolation disabled:
 
 ## Publishing a package
 
-You can publish a package to {% data variables.product.prodname_registry %} by authenticating with a *nuget.config* file{% ifversion fpt or ghes > 2.22 or ghae or ghec %}, or by using the `--api-key` command line option with your {% data variables.product.prodname_dotcom %} personal access token (PAT){% endif %}.
+You can publish a package to {% data variables.product.prodname_registry %} by authenticating with a *nuget.config* file, or by using the `--api-key` command line option with your {% data variables.product.prodname_dotcom %} personal access token (PAT).
 
-{% ifversion fpt or ghes > 2.22 or ghae or ghec %}
 ### Publishing a package using a GitHub PAT as your API key
 
 If you don't already have a PAT to use for your account on {% ifversion ghae %}{% data variables.product.product_name %}{% else %}{% data variables.product.product_location %}{% endif %}, see "[Creating a personal access token](/github/authenticating-to-github/creating-a-personal-access-token)."
@@ -112,7 +111,6 @@ If you don't already have a PAT to use for your account on {% ifversion ghae %}{
 
 {% data reusables.package_registry.viewing-packages %}
 
-{% endif %}
 
 ### Publishing a package using a *nuget.config* file
 
@@ -235,4 +233,4 @@ Your NuGet package may fail to push if the `RepositoryUrl` in *.csproj* is not s
 
 ## Further reading
 
-- "{% ifversion fpt or ghes > 3.0 or ghec %}[Deleting and restoring a package](/packages/learn-github-packages/deleting-and-restoring-a-package){% elsif ghes < 3.1 or ghae %}[Deleting a package](/packages/learn-github-packages/deleting-a-package){% endif %}"
+- "{% ifversion fpt or ghes > 3.0 or ghec or ghae %}[Deleting and restoring a package](/packages/learn-github-packages/deleting-and-restoring-a-package){% elsif ghes < 3.1 %}[Deleting a package](/packages/learn-github-packages/deleting-a-package){% endif %}"
